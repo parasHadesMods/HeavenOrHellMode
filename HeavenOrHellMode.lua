@@ -2,7 +2,6 @@ ModUtil.RegisterMod("HeavenOrHellMode")
 
 ModUtil.WrapBaseFunction("CreateNewHero", function(baseFunc, prevRun, args)
   local hero = baseFunc(prevRun, args)
-  print("hello")
   if GetNumMetaUpgrades("NoInvulnerabilityShrineUpgrade") >= 1 then
     AddIncomingDamageModifier( hero, {
       Name = "HeavenOrHellMode",
